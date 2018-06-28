@@ -27,6 +27,6 @@ ggplot.xts = function(df.xts,digits = 2 , date_breaks = waiver()){
       geom_text(aes(label=ifelse(date==last(date),round(value,digits),"")),vjust=0.1,hjust=-0.2)
   }
 
-  p
+  p + mytheme_right
 
 }
