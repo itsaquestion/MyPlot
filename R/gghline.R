@@ -1,8 +1,8 @@
 library(directlabels)
-ggvline = function(x = 0,...){
-  geom_vline(xintercept = x,...)
+ggvline = function(x = 0, col="gray50", ...){
+  geom_vline(xintercept = x,col="gray50",...)
 }
 
-gghline = function(y = 0,...){
-  geom_hline(yintercept = y,...)
+gghline = function(y = 0,col="gray50",...){
+  geom_hline(yintercept = y,col="gray50",...)
 }
