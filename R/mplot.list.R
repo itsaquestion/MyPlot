@@ -37,18 +37,23 @@ mplot.list = function(plots,use.one.x=F,theme = mytheme_right){
 
     bottom.theme = theme(plot.margin = unit(c(0,right.margin,bottom.margin,bottom.margin), "cm"))
 
-    if(i == 1){
-      # top plot
-      gp = ggplotGrob(plots[[i]] + top.theme)
+    if(numPlots > 1){
+      if(i == 1){
+        # top plot
+        gp = ggplotGrob(plots[[i]] + top.theme)
 
-    }else if( i!= numPlots ){
-      # middles
-      gp = ggplotGrob(plots[[i]] + mid.theme)
+      }else if( i!= numPlots ){
+        # middles
+        gp = ggplotGrob(plots[[i]] + mid.theme)
 
+      }else{
+        # bottom one
+        gp = ggplotGrob(plots[[i]] + bottom.theme)
+      }
     }else{
-      # bottom one
-      gp = ggplotGrob(plots[[i]] + bottom.theme)
+      gp = ggplotGrob(plots[[i]] + theme)
     }
+
 
 
     if( i == 1){
