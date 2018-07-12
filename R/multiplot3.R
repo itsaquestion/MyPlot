@@ -1,3 +1,5 @@
+# 坐标轴对齐，只有1列
+# ... 参数是xts对象
 multiplot3 = function(..., period = "::",theme = mytheme_right, titles = NULL,
                       use.one.x = T){
   data.list = list(...)
