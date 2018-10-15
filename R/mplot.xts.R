@@ -1,7 +1,7 @@
 # 坐标轴对齐，只有1列
 # ... 参数是xts对象
 mplot.xts = function(..., period = "::",theme = mytheme_right, titles = NULL,
-                      use.one.x = T){
+											use.one.x = T, fill.tail = F) {
   data.list = list(...)
   suppressWarnings({
 
@@ -33,7 +33,10 @@ mplot.xts = function(..., period = "::",theme = mytheme_right, titles = NULL,
       tmp.ed = last(index(data.list[[i]]))
       if(tmp.ed < end.date){
         tmp.data = xts(t(rep(NA,ncol(data.list[[i]]))),order.by = end.date)
-        names(tmp.data) = names(data.list[[i]])
+				names(tmp.data) = names(data.list[[i]])
+				if (fill.tail) {
+					tmp.data[1,] = as.vector(tail(data.list[[i]], 1))
+				}
         data.list[[i]] = rbind(data.list[[i]],tmp.data)
       }
 
