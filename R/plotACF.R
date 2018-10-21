@@ -1,3 +1,13 @@
+#' plotACF
+#'
+#' @param y
+#' @param lag.max
+#' @param breaks
+#'
+#' @return
+#' @export
+#'
+#' @examples
 plotACF = function(y,lag.max = 20, breaks = 1){
   ggplot_acf = function(x){
     df = data.frame(lag = x$lag,acf = x$acf)

@@ -1,10 +1,30 @@
+#' mplot
+#'
+#' @param x
+#'
+#' @return
+#' @export
+#'
+#' @examples
 mplot = function(x,...){
   UseMethod("mplot",x)
 }
 
 
-# mplot的核心部分
-mplot.list = function(plots,use.one.x=F,theme = mytheme_right){
+
+#' mplot.list
+#'
+#' @param plots
+#' @param use.one.x
+#' @param theme
+#'
+#' @return
+#' @export
+#'
+#' @examples
+mplot.list = function(plots, use.one.x = F, theme = mytheme_right) {
+	# mplot的核心部分
+
   numPlots = length(plots)
 
   tmp.plots = NULL

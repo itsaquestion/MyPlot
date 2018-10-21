@@ -1,7 +1,12 @@
-library(ggplot2)
-library(grid)
-library(gtable)
-
+#' double_axis_graph
+#'
+#' @param graf1
+#' @param graf2
+#'
+#' @return
+#' @export
+#' @import gtable
+#' @examples
 double_axis_graph <- function(graf1,graf2){
   graf1 <- graf1
 

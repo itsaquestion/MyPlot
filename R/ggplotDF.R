@@ -1,3 +1,13 @@
+#' ggplotDF
+#'
+#' @param df
+#' @param x.var
+#'
+#' @return
+#' @export
+#' @import reshape2
+#'
+#' @examples
 ggplotDF = function(df, x.var = NULL){
   index.name = "x"
   if(is.null(x.var)){

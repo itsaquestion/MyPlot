@@ -1,3 +1,14 @@
+#' gghist
+#'
+#' @param x
+#' @param bins
+#' @param density
+#' @param color
+#'
+#' @return
+#' @export
+#'
+#' @examples
 gghist = function(x,bins = 30,density=F,color = "grey95",...){
   df = data.frame(x)
   if(density){

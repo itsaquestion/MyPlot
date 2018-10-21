@@ -1,3 +1,13 @@
+#' ggplot.xts
+#'
+#' @param df.xts
+#' @param digits
+#' @param date_breaks
+#' @import ggplot2
+#' @return
+#' @export
+#'
+#' @examples
 ggplot.xts = function(df.xts, digits = 2, date_breaks = waiver()) {
 
   df = data.frame(date = index(df.xts), df.xts)
