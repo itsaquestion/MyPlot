@@ -1,5 +1,7 @@
 #' ggPlotMeanSd
 #'
+#' ggPlotMeanSd
+#'
 #' @param df_xts
 #' @param l1
 #' @param l2
