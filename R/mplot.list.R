@@ -23,7 +23,7 @@ mplot = function(x,...){
 #'
 #' @examples
 mplot.list = function(plots, use.one.x = F, theme = mytheme_right) {
-	# mplotµÄºËÐÄ²¿·Ö
+	# mplotçš„æ ¸å¿ƒéƒ¨åˆ†
 
   numPlots = length(plots)
 

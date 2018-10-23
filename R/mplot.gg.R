@@ -8,8 +8,8 @@
 #'
 #' @examples
 mplot.gg = function(..., use.one.x = T, theme = mytheme_right) {
-	# ×ø±êÖá¶ÔÆë£¬Ö»ÓĞ1ÁĞ
-	# ... ²ÎÊıÊÇggplot¶ÔÏó
+	# åæ ‡è½´å¯¹é½ï¼Œåªæœ‰1åˆ—
+	# ... å‚æ•°æ˜¯ggplotå¯¹è±¡
   plots = list(...)
   mplot.list(plots,use.one.x = use.one.x,theme = theme)
 }

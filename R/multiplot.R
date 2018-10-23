@@ -21,8 +21,8 @@ multiplot <- function(..., plotlist = NULL, file, cols = 1, layout = NULL) {
 	# then plot 1 will go in the upper left, 2 will go in the upper right, and
 	# 3 will go all the way across the bottom.
 
-	# 坐标轴不对齐，可以设定多列，最泛用的mulitplot
-	# ... 参数是ggplot对象
+	# 鍧愭爣杞翠笉瀵归綈锛屽彲浠ヨ瀹氬鍒楋紝鏈�娉涚敤鐨刴ulitplot
+	# ... 鍙傛暟鏄痝gplot瀵硅薄
 
 
   # Make a list from the ... arguments and plotlist
