@@ -1,8 +1,23 @@
-# ×ø±êÖá¶ÔÆë£¬Ö»ÓĞ1ÁĞ
-# ... ²ÎÊıÊÇxts¶ÔÏó
+
+#' mplot.xts
+#'
+#' @param period
+#' @param theme
+#' @param titles
+#' @param use.one.x
+#' @param fill.tail
+#'
+#' @return
+#' @export
+#'
+#' @examples
 mplot.xts = function(..., period = "::",theme = mytheme_right, titles = NULL,
 											use.one.x = T, fill.tail = F) {
   data.list = list(...)
+
+  # åæ ‡è½´å¯¹é½ï¼Œåªæœ‰1åˆ—
+  # ... å‚æ•°æ˜¯xtså¯¹è±¡
+
   suppressWarnings({
 
     for(i in 1:length(data.list)){

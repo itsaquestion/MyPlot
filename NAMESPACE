@@ -3,6 +3,7 @@
 S3method(ggplot,xts)
 S3method(mplot,gg)
 S3method(mplot,list)
+S3method(mplot,xts)
 export(double_axis_graph)
 export(first.labels)
 export(ggBreakByPeriod)

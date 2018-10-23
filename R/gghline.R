@@ -1,4 +1,4 @@
-library(directlabels)
+# library(directlabels)
 #' ggvline
 #'
 #' @param x
@@ -6,6 +6,7 @@ library(directlabels)
 #'
 #' @return
 #' @export
+#' @import directlabels
 #'
 #' @examples
 ggvline = function(x = 0, col = "gray50", ...) {
