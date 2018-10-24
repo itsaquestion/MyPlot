@@ -4,7 +4,7 @@
 \alias{mplot.list}
 \title{mplot.list}
 \usage{
-\method{mplot}{list}(plots, use.one.x = F, theme = mytheme_right)
+\method{mplot}{list}(plots, use.one.x = F)
 }
 \arguments{
 \item{theme}{}

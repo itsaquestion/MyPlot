@@ -4,7 +4,7 @@
 \alias{mplot.gg}
 \title{mplot.gg}
 \usage{
-\method{mplot}{gg}(..., use.one.x = T, theme = mytheme_right)
+\method{mplot}{gg}(..., use.one.x = T)
 }
 \arguments{
 \item{theme}{}

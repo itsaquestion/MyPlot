@@ -22,18 +22,20 @@ mplot = function(x,...){
 #' @export
 #'
 #' @examples
-mplot.list = function(plots, use.one.x = F, theme = mytheme_right) {
+mplot.list = function(plots, use.one.x = F) {
 	# mplot的核心部分
 
   numPlots = length(plots)
 
   tmp.plots = NULL
 
-
   for(i in 1:numPlots){
 
+    theme = plots[[i]]$theme
+
     if(use.one.x){
-      axisTheme = theme + theme(axis.title.x = element_blank(), axis.text.x = element_blank())
+      axisTheme = theme + theme(axis.title.x = element_blank(),
+                                axis.text.x = element_blank())
     }else{
       axisTheme = theme
     }
@@ -73,7 +75,6 @@ mplot.list = function(plots, use.one.x = F, theme = mytheme_right) {
     }else{
       gp = ggplotGrob(plots[[i]] + theme)
     }
-
 
 
     if( i == 1){
