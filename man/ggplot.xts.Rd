@@ -4,7 +4,8 @@
 \alias{ggplot.xts}
 \title{ggplot.xts}
 \usage{
-\method{ggplot}{xts}(df.xts, digits = 2, date_breaks = waiver())
+\method{ggplot}{xts}(df.xts, digits = 2, date_breaks = waiver(),
+  theme = mytheme_right)
 }
 \description{
 ggplot.xts

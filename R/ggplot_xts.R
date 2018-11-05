@@ -16,17 +16,17 @@ ggplot.xts = function(df.xts,
 
   df = data.frame(date = index(df.xts), df.xts)
 
-  # ¼ÓÒ»ÁĞlast_value£¬ÓÃÓÚdirectlabelsÏÔÊ¾×îĞÂÖµ
+  # åŠ ä¸€åˆ—last_valueï¼Œç”¨äºdirectlabelsæ˜¾ç¤ºæœ€æ–°å€¼
   df2 = reshape2::melt(df, "date") %>%
     group_by(variable) %>%
     mutate(last_value = round(last(value), digits))
 
-  # ×óÓÒÁô¿Õ
+  # å·¦å³ç•™ç©º
   first.date = min(df$date)
   last.date = max(df$date)
   pc.d = round((last.date - first.date) / 20, 0)
 
-  # ÉÏÏÂÁô¿Õ
+  # ä¸Šä¸‹ç•™ç©º
   max.value = max(df2$value)
   min.value = min(df2$value)
   pc.v = (max.value - min.value) / 20
