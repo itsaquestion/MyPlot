@@ -5,6 +5,7 @@ library(xts)
 library(MyUtils)
 library(dplyr)
 library(MyPlot)
+library(directlabels)
 
 a = w.getWsd("000300.SH","pe_ttm",use.name = T)["2012::"]
 b = w.getWsd("000905.SH", "pe_ttm",use.name = T)["2012::"]
@@ -17,5 +18,4 @@ date_breaks = waiver()
 
 df.xts = cbind(a,b)
 
-ggplot.xts(cbind(b,b*1.05))
-
+ggplot.xts(cbind(b, b * 1.05))  + gghline(30)

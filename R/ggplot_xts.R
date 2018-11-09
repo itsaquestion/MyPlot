@@ -33,9 +33,9 @@ ggplot.xts = function(df.xts,
 
   p = ggplot(df2, aes(x = date, y = (value), group = variable, color = variable)) +
       scale_x_date(limits = c(first.date - pc.d, last.date + pc.d), date_breaks = date_breaks) +
-      #scale_y_continuous(limits = c(min.value - pc.v, max.value + pc.v)) +
-      geom_line(size = 0.8) + ylab("") + xlab("") +
-      geom_dl(aes(label = last_value, color = variable), method = list("last.qp"))
+  #scale_y_continuous(limits = c(min.value - pc.v, max.value + pc.v)) +
+  geom_line(size = 0.8) + ylab("") + xlab("") +
+      geom_dl(aes(label = last_value, color = variable), method = list(dl.trans(x = x + 0.1), "last.qp"))
 
   p + theme
 
