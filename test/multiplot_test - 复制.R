@@ -19,5 +19,9 @@ mplot(a,
       period = "2000::")
 
 
+mplot.list
 
 
+p1 = ggplot(a["2005::"])
+p2 = ggplot(b["2005::"])
+plots = list(p1, p2)

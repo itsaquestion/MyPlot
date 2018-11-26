@@ -40,24 +40,25 @@ mplot.list = function(plots, use.one.x = F) {
       axisTheme = theme
     }
 
-    top.margin = 0.5
-    right.margin = 0.5
-    bottom.margin = 0.2
+    top.margin = 0.4
+    right.margin = 0.1
+    bottom.margin = 0.1
+    left.margin = 0.1
 
-    if(plots[[1]]$theme$legend.position == "right"){
-      right.margin = 0.1
-    }
-    if(plots[[1]]$theme$legend.position == "bottom"){
+    #if(plots[[1]]$theme$legend.position == "right"){
+      #right.margin = 0.1
+    #}
+    #if(plots[[1]]$theme$legend.position == "bottom"){
       #bottom.margin = -0.5
-    }
+    #}
 
     top.theme = axisTheme +
-      theme(plot.margin = unit(c(top.margin,right.margin,bottom.margin,bottom.margin), "cm"))
+      theme(plot.margin = unit(c(top.margin, right.margin, bottom.margin, left.margin), "cm"))
 
     mid.theme = axisTheme +
-      theme(plot.margin = unit(c(0,right.margin,bottom.margin,bottom.margin), "cm"))
+      theme(plot.margin = unit(c(0, right.margin, bottom.margin, left.margin), "cm"))
 
-    bottom.theme = theme + theme(plot.margin = unit(c(0,right.margin,bottom.margin,bottom.margin), "cm"))
+    bottom.theme = theme + theme(plot.margin = unit(c(0, right.margin, -0.3, left.margin), "cm"))
 
     if(numPlots > 1){
       if(i == 1){
