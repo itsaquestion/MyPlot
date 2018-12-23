@@ -11,15 +11,12 @@ b = w.getPrice("000300.SH")
 
 period = "2005::"
 
-mplot(ggPlotMeanSd(a[period],l3 = T),
+mplot(ggPlotMeanSd(a[period],l3 = T) + ggtitle("БъЬт"),
       ggplot(b[period]))
 
 mplot(a,
       b,
       period = "2000::")
-
-
-mplot.list
 
 
 p1 = ggplot(a["2005::"])

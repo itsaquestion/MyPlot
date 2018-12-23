@@ -32,11 +32,16 @@ ggplot.xts = function(df.xts,
   pc.v = (max.value - min.value) / 20
 
   p = ggplot(df2, aes(x = date, y = (value), group = variable, color = variable)) +
-      scale_x_date(limits = c(first.date - pc.d, last.date + pc.d), date_breaks = date_breaks) +
   #scale_y_continuous(limits = c(min.value - pc.v, max.value + pc.v)) +
-  geom_line(size = 0.8) + ylab("") + xlab("") +
+      geom_line(size = 0.8) + ylab("") + xlab("") +
       geom_dl(aes(label = last_value, color = variable), method = list(dl.trans(x = x + 0.1), "last.qp"))
 
+  if("POSIXct" %in% class(df2$date)){
+    p = p + scale_x_datetime(limits = c(first.date - pc.d, last.date + pc.d), date_breaks = date_breaks)
+  }
+  if("Date" %in% class(df2$date)){
+    p = p + scale_x_date(limits = c(first.date - pc.d, last.date + pc.d), date_breaks = date_breaks)
+  }
   p + theme
 
 }
