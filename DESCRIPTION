@@ -1,7 +1,7 @@
 Package: MyPlot
 Type: Package
 Title: What the Package Does (Title Case)
-Version: 1.4.0
+Version: 1.4.1
 Author: Who wrote it
 Maintainer: Who to complain to <yourfault@somewhere.net>
 Description: More about what it does (maybe more than one line)
@@ -9,5 +9,7 @@ License: What license is it under?
 LazyData: TRUE
 Imports: ggplot2,
     directlabels,
-    reshape2
+    reshape2,
+	tibble,
+	MyUtils
 RoxygenNote: 6.1.1

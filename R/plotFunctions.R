@@ -1,6 +1,6 @@
 makeDfWithParams = function(fun, params, x_points) {
-  params = as.tibble(params)
-  df = rowMap(params, function(pp) {
+  params = tibble::as.tibble(params)
+  df = MyUtils::rowMap(params, function(pp) {
     y_points = do.call(fun, c(list(x = x_points), as.list(pp)))
 
     p_names = names(params)
@@ -50,8 +50,6 @@ makeDfWithParams = function(fun, params, x_points) {
 #' plotFunctions(CRRA, params, x = c(0.1, 5), size = 0.6, end_spaces = 0.05) +
 #'   ggtitle("CRRA") + ylim(-1, 4) + MyPlot::gghline(0)
 #'
-
-
 plotFunctions = function(fun, params = NULL, n = 101, x = c(1, 5),
                           size = 0.5, end_spaces = 0) {
 
