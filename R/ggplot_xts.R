@@ -14,7 +14,7 @@ ggplot.xts = function(df.xts,
                       date_breaks = waiver(),
                       theme = mytheme_right) {
 
-  df = data.frame(date = index(df.xts), df.xts)
+  df = bind_cols(date = index(df.xts), as_tibble(df.xts))
 
   # 加一列last_value，用于directlabels显示最新值
   df2 = reshape2::melt(df, "date") %>%
