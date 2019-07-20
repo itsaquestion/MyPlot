@@ -58,7 +58,7 @@ mplot.list = function(plots, use.one.x = F) {
     mid.theme = axisTheme +
       theme(plot.margin = unit(c(0, right.margin, bottom.margin, left.margin), "cm"))
 
-    bottom.theme = theme + theme(plot.margin = unit(c(0, right.margin, -0.3, left.margin), "cm"))
+    bottom.theme = theme + theme(plot.margin = unit(c(0, right.margin, 0, left.margin), "cm"))
 
     if(numPlots > 1){
       if(i == 1){
